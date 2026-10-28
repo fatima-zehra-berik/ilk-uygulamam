@@ -8,8 +8,9 @@ export default function RootLayout() {
       <Stack.Screen name="profil" />
       <Stack.Screen name="destek" />
       <Stack.Screen name="liste" />
-      {/* Föy Şartı: Yeni dinamik rota şeması iskelete eklendi */}
       <Stack.Screen name="ariza/[id]" />
+      {/* Uygulama 2: Ürün Kataloğu Dinamik Rotası eklendi */}
+      <Stack.Screen name="urun/[id]" />
     </Stack>
   );
 }

@@ -6,7 +6,6 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Kişiselleştirilmiş Başlık */}
       <Text style={styles.text}>Mobil Programlama Lab - Fatma Zehra Berik</Text>
 
       <TouchableOpacity
@@ -34,15 +33,23 @@ export default function HomeScreen() {
         style={[styles.button, styles.listeButton]}
         onPress={() => router.push("/liste")}
       >
-        <Text style={styles.buttonText}>Gelişmiş Destek Paneli 📊</Text>
+        <Text style={styles.buttonText}>Arıza Takip Navigasyonu 📊</Text>
       </TouchableOpacity>
 
-      {/* FÖY KURALI: ÇÖKME KORUMASI TEST BUTONU */}
+      {/* UYGULAMA 2 BUTONLARI */}
+
+      <TouchableOpacity
+        style={[styles.button, styles.katalogButton]}
+        onPress={() => router.push("/katalog" as any)}
+      >
+        <Text style={styles.buttonText}>Mini Ürün Kataloğu 🛍️</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity
         style={[styles.button, styles.hataButton]}
-        onPress={() => router.push("/ariza/999" as any)}
+        onPress={() => router.push("/urun/p999" as any)}
       >
-        <Text style={styles.buttonText}>Hata Sayfası Test Et (999) 🚨</Text>
+        <Text style={styles.buttonText}>Katalog Hata Testi (p999) 🚨</Text>
       </TouchableOpacity>
     </View>
   );
@@ -54,7 +61,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
-    gap: 15,
+    gap: 12,
   },
   text: {
     fontSize: 16,
@@ -75,6 +82,7 @@ const styles = StyleSheet.create({
   profilButton: { backgroundColor: "#2ed573" },
   destekButton: { backgroundColor: "#6c5ce7" },
   listeButton: { backgroundColor: "#e67e22" },
-  hataButton: { backgroundColor: "#dc2626" }, // Hata butonu için kırmızı renk
+  katalogButton: { backgroundColor: "#6366f1" }, // İndigo mavi katalog rengi
+  hataButton: { backgroundColor: "#dc2626" },
   buttonText: { color: "#fff", fontSize: 15, fontWeight: "600" },
 });
