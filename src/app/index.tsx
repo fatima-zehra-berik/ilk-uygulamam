@@ -36,8 +36,6 @@ export default function HomeScreen() {
         <Text style={styles.buttonText}>Arıza Takip Navigasyonu 📊</Text>
       </TouchableOpacity>
 
-      {/* UYGULAMA 2 BUTONLARI */}
-
       <TouchableOpacity
         style={[styles.button, styles.katalogButton]}
         onPress={() => router.push("/katalog" as any)}
@@ -45,11 +43,21 @@ export default function HomeScreen() {
         <Text style={styles.buttonText}>Mini Ürün Kataloğu 🛍️</Text>
       </TouchableOpacity>
 
+      {/* UYGULAMA 3: DERS PROGRAMI YENİ BUTONLARI */}
+      <TouchableOpacity
+        style={[styles.button, styles.programButton]}
+        onPress={() => router.push("/program" as any)}
+      >
+        <Text style={styles.buttonText}>Öğrenci Ders Programı 📅</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity
         style={[styles.button, styles.hataButton]}
-        onPress={() => router.push("/urun/p999" as any)}
+        onPress={() => router.push("/ders/d999" as any)}
       >
-        <Text style={styles.buttonText}>Katalog Hata Testi (p999) 🚨</Text>
+        <Text style={styles.buttonText}>
+          Ders Programı Hata Testi (d999) 🚨
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -61,7 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
-    gap: 12,
+    gap: 10,
   },
   text: {
     fontSize: 16,
@@ -73,16 +81,17 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#007AFF",
-    paddingVertical: 12,
+    paddingVertical: 11,
     paddingHorizontal: 20,
     borderRadius: 8,
-    width: 270,
+    width: 280,
     alignItems: "center",
   },
   profilButton: { backgroundColor: "#2ed573" },
   destekButton: { backgroundColor: "#6c5ce7" },
   listeButton: { backgroundColor: "#e67e22" },
-  katalogButton: { backgroundColor: "#6366f1" }, // İndigo mavi katalog rengi
+  katalogButton: { backgroundColor: "#6366f1" },
+  programButton: { backgroundColor: "#4f46e5" }, // Ders programı için indigo mavi renk
   hataButton: { backgroundColor: "#dc2626" },
-  buttonText: { color: "#fff", fontSize: 15, fontWeight: "600" },
+  buttonText: { color: "#fff", fontSize: 14, fontWeight: "600" },
 });
